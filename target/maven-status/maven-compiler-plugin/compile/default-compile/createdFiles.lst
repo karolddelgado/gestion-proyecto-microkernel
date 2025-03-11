@@ -1,0 +1,12 @@
+co\unicauca\microkernel\gestionproyectos\core\domain\services\validationPipelines\PipelineStep.class
+co\unicauca\microkernel\gestionproyectos\core\plugin\manager\PluginManager.class
+co\unicauca\microkernel\gestionproyectos\core\domain\services\validationPipelines\NormalizationStep.class
+co\unicauca\microkernel\gestionproyectos\core\domain\services\validationPipelines\ValidationStep.class
+co\unicauca\microkernel\gestionproyectos\core\domain\entities\Project.class
+co\unicauca\microkernel\gestionproyectos\core\plugin\manager\IProjectRepositoryPlugin.class
+co\unicauca\microkernel\gestionproyectos\app\Main.class
+co\unicauca\microkernel\gestionproyectos\core\domain\services\validationPipelines\ProjectPipeline.class
+co\unicauca\microkernel\gestionproyectos\core\domain\services\ProjectService.class
+co\unicauca\microkernel\gestionproyectos\access\ProjectsRepositoryArrayPlugin.class
+co\unicauca\microkernel\gestionproyectos\core\domain\entities\User.class
+co\unicauca\microkernel\gestionproyectos\core\domain\services\validationPipelines\RegisterStep.class
