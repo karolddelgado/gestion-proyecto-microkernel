@@ -38,4 +38,5 @@
         <maven.compiler.target>17</maven.compiler.target>
         <exec.mainClass>co.unicauca.microkernel.plugins.chile.gestionproyectosmicrokernel.GestionProyectosMicrokernel</exec.mainClass>
     </properties>
+    <name>Microkernel_Core</name>
 </project>
