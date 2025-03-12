@@ -1,10 +1,10 @@
 package co.unicauca.microkernel.gestionproyectos.core.domain.services;
 
-import co.unicauca.microkernel.gestionproyectos.core.plugin.manager.IProjectRepositoryPlugin;
-import co.unicauca.microkernel.gestionproyectos.core.domain.entities.Project;
-import co.unicauca.microkernel.gestionproyectos.core.domain.entities.User;
+import co.edu.unicauca.microkernel_common.entities.Project;
+import co.edu.unicauca.microkernel_common.entities.User;
+import co.edu.unicauca.microkernel_common.interfaces.IProjectRepositoryPlugin;
+import co.edu.unicauca.microkernel_project.ProjectsRepositoryArrayPlugin;
 import co.unicauca.microkernel.gestionproyectos.core.plugin.manager.PluginManager;
-import co.unicauca.microkernel.gestionproyectos.access.ProjectsRepositoryArrayPlugin;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -31,7 +31,7 @@ public class ProjectServiceTest {
     }
 
     @Test
-    public void testRegisterProject() {
+    public void testRegisterProject() throws Exception {
         // Arrange
         String title = "Sistema de Inventarios";
         String description = "Desarrollar un sistema de gestión de inventarios.";
@@ -49,7 +49,7 @@ public class ProjectServiceTest {
     }
 
     @Test
-    public void testListProject() {
+    public void testListProject() throws Exception {
         // Arrange
         User empresa = new User("TechCorp", "contacto@techcorp.com", "EMPRESA");
         projectService.registerProject("Sistema de Inventarios", "Desarrollar un sistema de gestión de inventarios.", empresa);
@@ -63,7 +63,7 @@ public class ProjectServiceTest {
     }
 
     @Test
-    public void testAssignProject() {
+    public void testAssignProject() throws Exception {
         // Arrange
         String title = "Sistema de Inventarios";
         User empresa = new User("TechCorp", "contacto@techcorp.com", "EMPRESA");

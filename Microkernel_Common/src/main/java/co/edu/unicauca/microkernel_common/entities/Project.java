@@ -1,4 +1,4 @@
-package co.unicauca.microkernel.gestionproyectos.core.domain.entities;
+package co.edu.unicauca.microkernel_common.entities;
 
 /**
  * Representa un proyecto dentro del sistema de gestión de proyectos.

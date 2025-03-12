@@ -1,5 +1,5 @@
 
-package co.unicauca.microkernel.gestionproyectos.core.domain.entities;
+package co.edu.unicauca.microkernel_common.entities;
 
 /**
  * Representa a los usuarios del sistema.

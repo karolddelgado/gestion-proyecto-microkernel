@@ -1,6 +1,6 @@
-package co.unicauca.microkernel.gestionproyectos.core.plugin.manager;
+package co.edu.unicauca.microkernel_common.interfaces;
 
-import co.unicauca.microkernel.gestionproyectos.core.domain.entities.Project;
+import co.edu.unicauca.microkernel_common.entities.Project;
 import java.util.List;
 
 /**

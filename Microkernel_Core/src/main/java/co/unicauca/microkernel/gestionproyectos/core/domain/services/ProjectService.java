@@ -4,9 +4,9 @@ import co.unicauca.microkernel.gestionproyectos.core.domain.services.validationP
 import co.unicauca.microkernel.gestionproyectos.core.domain.services.validationPipelines.RegisterStep;
 import co.unicauca.microkernel.gestionproyectos.core.domain.services.validationPipelines.NormalizationStep;
 import co.unicauca.microkernel.gestionproyectos.core.domain.services.validationPipelines.ProjectPipeline;
-import co.unicauca.microkernel.gestionproyectos.core.plugin.manager.IProjectRepositoryPlugin;
-import co.unicauca.microkernel.gestionproyectos.core.domain.entities.Project;
-import co.unicauca.microkernel.gestionproyectos.core.domain.entities.User;
+import co.edu.unicauca.microkernel_common.entities.Project;
+import co.edu.unicauca.microkernel_common.entities.User;
+import co.edu.unicauca.microkernel_common.interfaces.IProjectRepositoryPlugin;
 import co.unicauca.microkernel.gestionproyectos.core.plugin.manager.PluginManager;
 
 /**
@@ -28,7 +28,7 @@ public class ProjectService {
      * el pipeline de procesamiento.
      */
     public ProjectService() {
-        this.repositorio = PluginManager.getPlugins().get(0);
+        this.repositorio = PluginManager.getPlugin("project");
         this.pipeline = new ProjectPipeline();
         // Se agregan los pasos del pipeline
         this.pipeline.addStep(new ValidationStep());
@@ -43,10 +43,20 @@ public class ProjectService {
      * @param description Descripción del proyecto.
      * @param empresa     Usuario que representa la empresa que propone el proyecto.
      */
-    public void registerProject(String title, String description, User empresa) {
+    public void registerProject(String title, String description, User empresa) throws Exception{
         Project proyecto = new Project(title, description, empresa);
         try {
             pipeline.execute(proyecto);
+            
+            PluginManager manager = PluginManager.getInstance();
+            IProjectRepositoryPlugin plugin = manager.getPlugin("project");
+
+            if (plugin == null) {
+                throw new Exception("No hay un plugin disponible para project");
+            }
+
+            plugin.addProject(proyecto);
+            
             System.out.println("Proyecto registrado: " + proyecto.getTitle());
         } catch (Exception e) {
             System.out.println("Error al registrar el proyecto: " + e.getMessage());

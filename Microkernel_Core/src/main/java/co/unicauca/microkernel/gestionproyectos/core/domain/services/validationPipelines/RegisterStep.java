@@ -1,8 +1,8 @@
 
 package co.unicauca.microkernel.gestionproyectos.core.domain.services.validationPipelines;
 
-import co.unicauca.microkernel.gestionproyectos.core.plugin.manager.IProjectRepositoryPlugin;
-import co.unicauca.microkernel.gestionproyectos.core.domain.entities.Project;
+import co.edu.unicauca.microkernel_common.entities.Project;
+import co.edu.unicauca.microkernel_common.interfaces.IProjectRepositoryPlugin;
 import java.util.List;
 
 /**

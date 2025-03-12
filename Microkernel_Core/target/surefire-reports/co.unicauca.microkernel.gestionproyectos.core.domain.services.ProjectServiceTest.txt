@@ -1,4 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectServiceTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.150 s -- in co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectServiceTest
+Tests run: 4, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.065 s <<< FAILURE! -- in co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectServiceTest
+co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectServiceTest.testListProject -- Time elapsed: 0.028 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "co.unicauca.microkernel.gestionproyectos.core.plugin.manager.PluginManager.getPlugin(String)" because "manager" is null
+	at co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectService.registerProject(ProjectService.java:51)
+	at co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectServiceTest.testListProject(ProjectServiceTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectServiceTest.testRegisterProject -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "co.unicauca.microkernel.gestionproyectos.core.plugin.manager.PluginManager.getPlugin(String)" because "manager" is null
+	at co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectService.registerProject(ProjectService.java:51)
+	at co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectServiceTest.testRegisterProject(ProjectServiceTest.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectServiceTest.testAssignProject -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "co.unicauca.microkernel.gestionproyectos.core.plugin.manager.PluginManager.getPlugin(String)" because "manager" is null
+	at co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectService.registerProject(ProjectService.java:51)
+	at co.unicauca.microkernel.gestionproyectos.core.domain.services.ProjectServiceTest.testAssignProject(ProjectServiceTest.java:72)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
